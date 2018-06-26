@@ -1,0 +1,364 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Optimal Frequencies for Pulsar Timing</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<style>
+			li { margin-bottom: 8pt; }
+		</style>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>NANOGrav</strong> Work on Radio Frequency Optimization</a>
+									<ul class="icons">
+										<li><a href="https://twitter.com/nanograv?lang=en" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="https://www.facebook.com/NANOGrav/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.instagram.com/nanograv/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h2>Optimal Frequency Ranges for Sub-Microsecond Precision Pulsar Timing</h2>
+										</header>
+										<p>by members of the <a href="http://nanograv.org/people/">NANOGrav Collaboration</a>;</br>
+											corresponding author: <a href="mailto:mlam@mail.wvu.edu?Subject=NANOGrav%20Optimal%20Frequencies"
+											target="_top">Michael T. Lam</a>.
+										</p>
+										<p>Submitted to the Astrophysical Journal, Oct 6, 2017.
+										<p>
+
+										 In order to fully optimize our current and future telescope observations of pulsars for precision timing experiments, we developed a comprehensive framework for determining pulse arrival-time uncertainties as a function of radio frequency and bandwidth. The optimal observing strategy is <b>telescope- and pulsar-dependent</b>. We examined several pulsars observed by the <a href="http://nanograv.org/">North American Nanohertz Observatory for Gravitational Waves (NANOGrav)</a> and find that many pulsars can benefit from observations performed at higher frequencies than those currently used, with larger bandwidths. Unintuitively, in many cases, increasing the bandwidth arbitrarily will not improve the arrival-time precision we can obtain. Building this framework into pulsar timing observations will be critical for reaching the maximum possible sensitivity for our science.
+
+										
+
+
+										</p>
+										<ul class="actions">
+											<li><a href="https://arxiv.org/abs/1710.02272" class="button medium">Read paper</a></li>
+											<!---<li><a href="https://github.com/nanograv/11yr_stochastic_analysis" class="button medium">View code</a></li>-->
+										</ul>
+									</div>
+									<span class="image object">
+										<img src="images/profilepicPFC.jpg" alt="" />
+									</span>
+								</section>
+
+
+								<!-- Section 0 -->
+									<section>
+										<header class="major">
+											<h2>The Frequency Dependence of Observed Pulsar Emission</h2>
+										</header>
+
+										<div class="row 200%">
+
+											<div class="6u 12u$(medium)">
+												<span class="image fit"><img src="images/x130.png" alt="" /></span>
+												<p><b>Image</b>: wideband radio observations of the Galactic Center magnetar SGR 1745&mdash;2900. (Credit: <a href="https://arxiv.org/abs/1505.00836">Pennucci et al. 2015</a>)</p>
+											</div>
+
+											<div class="6u 12u$(medium)">
+												<ul>
+
+												  <li>
+												    Pulsar emission is observed to be <b>vary as a function of frequency</b>. The emission generated at the pulsar varies with radio frequency such that the intrinsic pulse shapes change. Propagation effects alter pulse shapes and delay the emission in frequency-dependent ways. Finally, observational mis-calibration can vary as a function of frequency as well.
+												    </li>
+												  <li>
+												    The interstellar medium is filled with turbulent, free electrons that cause variation to propagating radio signals. Common optical effects include <b>dispersion</b> (like a prism splitting visible light, the radio light splits and takes longer to arrive at our telescopes depending on the wavelength), <b>refraction</b> (bulk bending of light), <b>scintillation</b> (like the twinkling of starlight), <b>scattering</b> (diffuse deviations in the propagation path), and more.
+												  </li>
+
+												  <li>
+			       											Precision timing of millisecond pulsars over years
+															and decades allows us to build <b>models of radio-pulse
+															arrival times of incredible accuracy</b>. These models
+															account for the pulsar's spin period, its evolution, the dispersion of radio pulses in
+															the interstellar medium, and many other effects. Unremoved interstellar propagation effects in our timing data greatly reduces our sensitivity to gravitational waves.
+													</li>
+
+													<li>
+													Advancing the modeling and correction of not only interstellar delays, but all frequency-dependent delays, in our timing data is a prime focus of NANOGrav's <b>Interstellar Medium Mitigation</b> working group. The development of the noise-modeling framework falls under the task of the <b>Noise Budget</b> working group.
+													</li>
+
+
+
+
+												</ul>
+
+												<ul class="actions">
+													<li><a href="http://nanograv.org/research/" class="button medium">Read more</a></li>
+												</ul>
+
+											</div>
+
+										</div>
+
+									</section>
+
+							<!-- Section 1 -->
+								<section>
+									<header class="major">
+										<h2>Frequency-Dependent Timing Effects</h2>
+									</header>
+
+									<div class="row 200%">
+
+										<div class="6u 12u$(medium)">
+											<ul>
+												<li>
+													There are many components to consider in the full <b>"noise budget"</b> of a pulsar. In this work, we only consider the <b>uncertainties on the pulse arrival-times</b> and do not look at systematic offsets, such as from long-term pulsar spin noise.
+												</li>
+
+												<li>
+												  The broad contributions we consider are <b>"white noise" contributions</b> (in time) to the arrival-time uncertainties from the finite signal-to-noise ratio of pulses, pulse phase jitter, and from the finite-scintle effect. We also consider various components to <b>dispersion measure estimation</b> errors. Lastly, we include observational effects such as from <b>calibration and interference</b> errors.
+
+
+												</li>
+
+												<li>
+												  From a frequency-dependence perspective, the two primary components to consider are from how <b>bright</b> the pulsar is and how well we can <b>estimate dispersion measure delays</b>. On average, pulsars that are closer to the Earth will be brighter and also have lower dispersion measures since there will be fewer electrons between the pulsar and us.
+
+												</li>
+
+												<li>
+			In the implementation of our framework, we make certain approximations due to uncertainties in pulsar parameters over a wide frequency range. However, we pull together <b>all physical effects</b> necessary to reproduce the mathematical model from the literature.	
+
+												</li>
+
+											</ul>
+
+										</div>
+
+										<div class="6u 12u$(medium)">
+											<span class="image fit"><img src="images/table1.png" alt="" /></span>
+												<p><b>Image</b>: timing effects we consider in our framework.</p>
+										</div>
+
+									</div>
+
+								</section>
+
+
+								<!-- Section 2 -->
+									<section>
+										<header class="major">
+											<h2>Frequency-Bandwidth Optimization</h2>
+										</header>
+
+										<div class="row 200%">
+
+											<div class="6u 12u$(medium)">
+												<span class="image fit"><img src="images/J1909-3744.png" alt="" /></span>
+												<p><b>Image</b>: results of our analysis for the pulsar J1909&mdash;3744, one of NANOGrav's best-timed pulsars. The circle shows our current observational setup and the star shows the optimum.
+
+</p>
+
+
+											</div>
+
+											<div class="6u 12u$(medium)">
+
+												<ul>
+													<li>
+
+													  Using various measurements from <b>NANOGrav's 9-yr and 11-yr data release paper series</b>, we are able to combine all of the necessary ingredients to <b>fully model</b> the noise of the pulsars.
+
+													</li>
+
+													<li>
+				We explored the noise properties of five select pulsars and the effect of choosing different frequency ranges on their pulse arrival-time precision. Two are considered our <b>top pulsars for gravitational wave sensitivity</b>. One was the pulsar with the highest dispersion measure and therefore is a good case study for some of the largest interstellar medium effects impacting the timing data. Another was our lowest dispersion measure pulsar so that we could probe the opposite end of the scale. Lastly, we chose one pulsar with a relatively high dispersion measure but that we know <b>displays unusual frequency-dependence</b> of the arrival times. How to successfully model this pulsar is an ongoing work in progress by NANOGrav and its international collaborators.
+													</li>
+
+													<li>
+				For our top pulsars, we lie in a "valley" in the frequency-bandwidth plane (see image) that is <b>close to the best</b> possible arrival-time precision given our approximations. More realistic parameterization of the pulsars and telescopes will be required to verify the results.	For our highest dispersion measure pulsars, our model overestimates the arrival-time precision that we observe. Certain variations in the interstellar medium are not well quantified by us and cannot be done so with our current instrumentation. Work is progressing currently on the implementation of <b>"cyclic spectroscopy"</b> which will allow us to gain new insights into the variability of the interstellar medium.							
+													</li>
+
+													<li>
+			 While dependent on the various parameters, our current set of pulsars can benefit from slightly higher center frequencies and larger bandwidths. In the future, new pulsars found out to greater distances in the Galaxy with higher dispersion measures <b>will require higher center frequencies</b> to be included in pulsar timing arrays. 
+
+													</li>
+
+												</ul>
+
+											</div>
+
+										</div>
+
+									</section>
+
+									<!-- Section 3 -->
+										<section>
+											<header class="major">
+												<h2>Our code</h2>
+											</header>
+
+											<div class="row 200%">
+
+												<div class="6u 12u$(medium)">
+
+													<ul>
+														<li>
+														  Our code is <b>open-sourced and freely available</b> on <a href="https://github.com/mtlam/FrequencyOptimizer">GitHub</a>.
+
+				</li>
+
+														<li>
+														  For a specified frequency and bandwidth, the code will calculate the arrival-time uncertainty given <b>pulsar-, telescope-, and Galaxy-dependent parameters</b>. Arange of frequencies and bandwidths can be calculated all at once, as in our paper. 
+
+														</li>
+
+
+														<li>
+
+				The code requires only <b>basic Python packages</b> (<a href="http://www.numpy.org/">NumPy</a>, <a href="https://www.scipy.org/">SciPy</a>, and <a href="https://matplotlib.org/">Matplotlib</a>). The user can choose to implement parallelization to speed up the computation of a grid easily without additional packages.
+
+														</li>
+
+														<li>
+					Code <b>development is ongoing</b>, with new features and speed-ups being implemented. Integration with <a href="http://www.astropy.org/">Astropy</a> will be a future design goal.													</li>
+
+										
+													</ul>
+
+												</div>
+
+												<div class="6u 12u$(medium)">
+													<span class="image fit"><img src="images/table2.png" alt="" /></span>
+													<p><b>Image</b>: all pulsar, telecope, and Galactic parameters we use in our modeling of high-precision pulsars.</p>
+												</div>
+
+											</div>
+
+
+												<ul class="actions">
+												<li><a href="https://github.com/mtlam/FrequencyOptimizer" class="button medium">Get the code</a></li>
+												<li><a href="https://github.com/mtlam/FrequencyOptimizer/blob/master/example_analysis.ipynb" class="button medium">See an example</a></li>
+											</ul>
+
+										
+										</section>
+
+
+										<!-- Section 4 -->
+											<section>
+												<header class="major">
+													<h2>Future Prospects for Frequency Optimization</h2>
+												</header>
+
+												<div class="row 200%">
+
+													<div class="6u 12u$(medium)">
+														<span class="image fit"><img src="images/nrao17df12b.jpg" alt="" /></span>
+														<p><b>Image</b>: a computer rendering of the Next Generation Very Large Array (ngVLA; credit: NRAO).</p>
+													</div>
+
+													<div class="6u 12u$(medium)">
+
+														<ul>
+
+					<li>
+															  NANOGrav is working with other collaborations now to <b>understand our pulsars</b> at a wide range of frequencies, which will then feed back into these prediction models for the timing precision.
+															  </li>										  <li>
+
+						The development and deployment of <b>wideband receivers</b> at our current facilities can improve our arrival-time precision. While radiometer noise will typically increase with these systems compared to current receivers, the gain in overall integration time by not needing to switch frequency bands will <b>improve our sensitivity</b> by roughly &radic;2. Current observing strategies can also implement tuning of center frequencies for immediate precision gains.		
+														</li>
+
+										
+
+															<li>
+						New facilities are coming online or are being designed and will span a wide range of radio frequency coverage. Understanding how these observatories will impact our timing programs is critical for understanding the <b>impact on gravitational wave detection and characterization</b>. When designing new telescopes, our framework allows us to compare different observing setups and <b>optimize for performance</b>.
+
+
+															<li>
+
+					  Our work has been featured in concept proposals for the <a href="http://ngvla.nrao.edu/">Next Generation Very Large Array</a> (ngVLA) and a <b>dedicated telescope for pulsar timing array observations</b>. Work has also made predictions for <a href="https://chime-experiment.ca/">CHIME</a>, <a href="http://fast.bao.ac.cn/en/">FAST</a>, and <a href="http://www.ska.ac.za/gallery/meerkat/">MeerKAT</a>.
+															</li>
+										
+
+														</ul>
+
+													</div>
+
+												</div>
+
+
+											</section>
+
+											<!-- Section 5 -->
+				
+												<!-- Section 6 -->
+													<!-- Section 7 -->
+														<section>
+															<header class="major">
+																<h2>Authors</h2>
+															</header>
+
+															<div class="row 200%">
+
+																<div class="6u 12u$(medium)">
+																	<ul>
+																		<li>
+																		  Members of the <b>NANOGrav Collaboration</b>: M. T. Lam, M. A. McLaughlin, J. M. Cordes, S. Chatterjee, T. J. W. Lazio
+																		</li>
+
+
+																		<li><b>Contact</b>:
+
+
+<a href="mailto:mlam@mail.wvu.edu?Subject=NANOGrav%20Optimal%20Frequencies" target="_top">Dr. Michael T. Lam</a> (corresponding author),
+<a href="mailto:maura.mclaughlin@mail.wvu.edu?Subject=NANOGrav%2011-year%20Paper" target="_top">Prof. Maura McLaughlin</a> (NANOGrav chair).</li>
+
+																	</ul>
+																</div>
+
+																<div class="6u 12u$(medium)">
+																	<span class="image fit"><img src="images/nano_people.jpg" alt="" /></span>
+																	<p>The NANOGrav Collaboration at the 2017 Fall meeting in Lafayette College, PA
+																</div>
+
+															</div>
+
+
+														</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<p class="copyright">&copy; NANOGrav 2018. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+		</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+
+
+	</body>
+
+
+</html>
