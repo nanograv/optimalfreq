@@ -6,7 +6,7 @@ This repository links to various components regarding [Lam et al. 2018a][1] ([ar
 
 [1]: http://iopscience.iop.org/article/10.3847/1538-4357/aac48d/meta
 [2]: https://arxiv.org/abs/1710.02272
-[3]: docs/index.html
+[3]: https://nanograv.github.io/optimalfreq/
 [4]: https://github.com/mtlam/FrequencyOptimizer
 [5]: https://github.com/mtlam/FrequencyOptimizer/blob/master/submission_version.tar.gz
 
